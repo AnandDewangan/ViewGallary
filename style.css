@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mochiy Pop One', sans-serif;
+}
+
+#box{
+    background-position: right;
+    background-size: cover;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    background-blend-mode: hard-light;
+    transition: all 1s ease-in;
+    border: none;
+    box-shadow: 3px 3px 6px 4px black;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#box:hover{
+    background-color: #999;
+    background-position: bottom;
+    margin: 2px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    min-height: 100vh;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(to right, maroon, lightgrey);
+}
+
+.quote {
+    flex-basis: 30%;
+    color: white;
+    align-items: center;
+}
+
+.quote p{
+    margin-top: 15%;
+    color: #ddd;
+}
+
+.picture{
+    flex-basis: 60%;
+    display: grid;
+    gap: 7px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 150px;
+}
+
+.row-2{
+    grid-row: span 2;
+}
+.col-2{
+    grid-column: span 2;
+}
+
+@media screen and (width <= 1024px) {
+    .container{
+        flex-direction: column;
+        background: linear-gradient(to bottom, maroon, lightgrey);
+    }
+    .picture{
+        width: 100%;
+        grid-auto-rows: 300px;
+    }
+    #box{
+        grid-row: span 1;
+        grid-column: span 3;
+        margin: 10px 20px;
+    }
+
+    .quote{
+        margin: 20px;
+    }
+}
